@@ -5,23 +5,29 @@ body {
   width: 100vw;
 }
 
+.header {
+  border-bottom: solid black;
+  padding: 20px;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
 }
 
 .bottom-container {
   display: flex;
-  padding: 20px;
 }
 
 .sidebar {
+  height: 80vh;
   width: 300px;
   padding: 20px;
 }
 
 .main-content-container {
+  height: 80vh;
   flex: 1;
   padding: 20px;
+  background-color: aliceblue;
 }
