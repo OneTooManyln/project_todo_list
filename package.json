@@ -1,0 +1,22 @@
+{
+  "name": "project_todo_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OneTooManyln/project_todo_list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OneTooManyln/project_todo_list/issues"
+  },
+  "homepage": "https://github.com/OneTooManyln/project_todo_list#readme",
+  "devDependencies": {
+    "webpack": "^5.82.1"
+  }
+}
