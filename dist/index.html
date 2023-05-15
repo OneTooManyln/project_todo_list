@@ -22,14 +22,16 @@
             <button class="new-task">+New Task</button>
             <div class="form-container">
               <form action="#">
-                <label for="task_title"></label>
-                <input
-                  type="text"
-                  id="task_title"
-                  name="task-title"
-                  placeholder="Title"
-                  required
-                />
+                <div class="inputs">
+                  <label for="task_title"></label>
+                  <input
+                    type="text"
+                    id="task_title"
+                    name="task-title"
+                    placeholder="Title"
+                    required
+                  />
+                </div>
                 <div class="inputs">
                   <label for="task_description"></label>
                   <input
@@ -40,6 +42,7 @@
                     required
                   />
                 </div>
+                <button type="submit" id="submit">Add Task</button>
               </form>
             </div>
           </div>
