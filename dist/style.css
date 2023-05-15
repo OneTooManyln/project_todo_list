@@ -41,6 +41,27 @@ ul {
   background-color: rgba(128, 128, 128, 0.226);
 }
 
+.form-container {
+  padding-left: 20px;
+  width: 150px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+form {
+  display: none;
+}
+
+input {
+  border: none;
+  background-color: aliceblue;
+  padding: 10px 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
 .main-content-container {
   height: 80vh;
   flex: 1;
