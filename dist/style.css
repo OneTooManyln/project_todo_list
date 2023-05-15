@@ -42,24 +42,31 @@ ul {
 }
 
 .form-container {
-  padding-left: 20px;
+  padding: 10px 20px;
   width: 150px;
   background-color: aliceblue;
   border-radius: 5px;
+  width: 250px;
 }
 
 form {
-  display: none;
+  /* display: none; */
 }
 
 input {
   border: none;
   background-color: aliceblue;
   padding: 10px 5px;
+  font-size: 1rem;
 }
 
 input:focus {
   outline: none;
+}
+
+#submit {
+  border: 1px solid black;
+  background-color: aliceblue;
 }
 
 .main-content-container {
