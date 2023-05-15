@@ -1,6 +1,7 @@
-class createTask {
-  constructor(project, description, time, type, status) {
+class task {
+  constructor(project, title, description, time, type, status) {
     this.project = project;
+    this.title = title;
     this.height = description;
     this.time = time;
     this.type = type;
