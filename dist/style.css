@@ -37,10 +37,6 @@ body {
   gap: 5px;
   padding: 20px;
   border-top: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-}
-
-.text-container {
 }
 
 .check-item {
