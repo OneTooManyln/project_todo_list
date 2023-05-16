@@ -73,7 +73,7 @@ input:focus {
 .main-content-container {
   flex: 1;
   padding: 20px;
-  background-color: aliceblue;
+  background-color: rgb(164, 201, 231);
 }
 
 .todo-item {
