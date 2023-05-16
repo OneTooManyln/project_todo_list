@@ -45,10 +45,13 @@ ul {
 }
 
 .form-container {
-  padding: 10px 20px;
   display: none;
+  position: absolute;
+  padding: 10px 20px;
   background-color: aliceblue;
   border-radius: 5px;
+  width: 500px;
+  height: 250px;
 }
 
 input {
