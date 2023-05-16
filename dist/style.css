@@ -1,4 +1,5 @@
 body {
+  display: flex;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -13,14 +14,16 @@ body {
 .content-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 
 .bottom-container {
   display: flex;
+  height: 100vh;
 }
 
 .sidebar {
-  height: 80vh;
   width: 300px;
   padding: 20px;
 }
@@ -43,14 +46,9 @@ ul {
 
 .form-container {
   padding: 10px 20px;
-  width: 150px;
+  display: none;
   background-color: aliceblue;
   border-radius: 5px;
-  width: 250px;
-}
-
-form {
-  /* display: none; */
 }
 
 input {
@@ -70,7 +68,6 @@ input:focus {
 }
 
 .main-content-container {
-  height: 80vh;
   flex: 1;
   padding: 20px;
   background-color: aliceblue;
