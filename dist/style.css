@@ -80,6 +80,11 @@ input:focus {
   flex: 1;
 }
 
+.form-bottom-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #submit {
   border: 1px solid black;
   background-color: aliceblue;
