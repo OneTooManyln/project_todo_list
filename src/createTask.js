@@ -11,12 +11,13 @@ class project {
 }
 
 class task {
-  constructor(title, description, time, type, status) {
-    this.project = project;
+  constructor(title, description, time, type, completed) {
     this.title = title;
     this.height = description;
     this.time = time;
     this.type = type;
-    this.status = status;
+    this.completed = completed;
   }
 }
+
+export default task;
