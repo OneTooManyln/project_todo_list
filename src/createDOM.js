@@ -28,12 +28,14 @@ const createNewDOMTask = function (title, description) {
   textContainer.appendChild(date);
 };
 
-export const displayDescription = function () {
-  const descriptionContainer = document.querySelector(".description-container");
-  if (descriptionContainer.style.display != "none") {
-    descriptionContainer.style.display = "none";
+export const displayDescription = function (target) {
+  /* const descriptionContainer = document.querySelector(".description-container"); */
+  const currentElement = target.currentTarget.childNodes[3];
+  if (currentElement.style.display != "none") {
+    currentElement.style.display = "none";
     console.log("this works");
-  } else descriptionContainer.style.display = "flex";
+  } else currentElement.style.display = "flex";
+  console.log(target.currentTarget.childNodes[3]);
 };
 
 export default createNewDOMTask;
