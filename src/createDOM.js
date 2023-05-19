@@ -28,4 +28,12 @@ const createNewDOMTask = function (title, description) {
   textContainer.appendChild(date);
 };
 
+export const displayDescription = function () {
+  const descriptionContainer = document.querySelector(".description-container");
+  if (descriptionContainer.style.display != "none") {
+    descriptionContainer.style.display = "none";
+    console.log("this works");
+  } else descriptionContainer.style.display = "flex";
+};
+
 export default createNewDOMTask;
