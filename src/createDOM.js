@@ -38,4 +38,11 @@ export const displayDescription = function (target) {
   console.log(target.currentTarget.childNodes[3]);
 };
 
+export const displayTaskForm = function () {
+  const newTaskBtn = document.querySelector(".new-task");
+  const formContainer = document.querySelector(".form-container");
+
+  formContainer.style.display = "flex";
+};
+
 export default createNewDOMTask;
