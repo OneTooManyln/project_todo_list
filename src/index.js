@@ -3,6 +3,7 @@ import {
   displayDescription,
   displayTaskForm,
   hideTaskForm,
+  createArrayTask,
 } from "./createDOM";
 import { default as task, taskArray } from "./createTask";
 
@@ -21,7 +22,7 @@ form.addEventListener("submit", (e) => {
   taskArray.push(newTask);
   console.table(taskArray);
 
-  createNewDOMTask(titleInput.value, descriptionInput.value);
+  createArrayTask(taskArray);
 });
 todoItem.forEach((todoItem) => {
   todoItem.addEventListener("click", (e) => {
