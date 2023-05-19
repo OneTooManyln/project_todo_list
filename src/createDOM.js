@@ -9,24 +9,25 @@ export const createArrayTask = function (array) {
   });
 };
 
-const createNewDOMTask = function (title, description) {
+const createNewDOMTask = function (title, description, date) {
   const newTask = document.createElement("div");
   const topContainer = document.createElement("div");
   const descriptionContainer = document.createElement("div");
   const checkItem = document.createElement("div");
   const textContainer = document.createElement("div");
   const titleText = document.createElement("p");
-  const date = document.createElement("div");
+  const time = document.createElement("div");
 
   newTask.classList.add("todo-item");
   topContainer.classList.add("top-item-container");
   descriptionContainer.classList.add("description-container");
   checkItem.classList.add("check-item");
   textContainer.classList.add("text-container");
-  date.classList.add("time");
+  time.classList.add("time");
 
   titleText.innerText = title;
   descriptionContainer.innerText = description;
+  time.innerText = date;
 
   mainContent.appendChild(newTask);
   newTask.appendChild(topContainer);
@@ -34,7 +35,7 @@ const createNewDOMTask = function (title, description) {
   topContainer.appendChild(checkItem);
   topContainer.appendChild(textContainer);
   textContainer.appendChild(titleText);
-  textContainer.appendChild(date);
+  textContainer.appendChild(time);
 };
 
 export const displayDescription = function (target) {
