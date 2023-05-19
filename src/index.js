@@ -2,6 +2,7 @@ import {
   default as createNewDOMTask,
   displayDescription,
   displayTaskForm,
+  hideTaskForm,
 } from "./createDOM";
 import { default as task, taskArray } from "./createTask";
 
@@ -11,6 +12,7 @@ const newTaskBtn = document.querySelector(".new-task");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  hideTaskForm();
 
   const titleInput = document.querySelector("#task-title");
   const descriptionInput = document.querySelector("#task-description");
