@@ -1,8 +1,9 @@
-import createNewDOMTask from "./createDOM";
-import task from "./createTask";
-import { taskArray } from "./createTask";
+import { default as createNewDOMTask, displayDescription } from "./createDOM";
+import { default as task, taskArray } from "./createTask";
 
 const form = document.querySelector("form");
+const todoItem = document.querySelector(".todo-item");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -14,4 +15,8 @@ form.addEventListener("submit", (e) => {
   console.table(taskArray);
 
   createNewDOMTask(titleInput.value, descriptionInput.value);
+});
+
+todoItem.addEventListener("click", () => {
+  displayDescription();
 });
