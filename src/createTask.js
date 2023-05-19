@@ -10,7 +10,10 @@
   }
 } */
 
-export const taskArray = [];
+export const taskArray = [
+  { title: "Workout session", description: "", date: "10:00 PM" },
+  { title: "Grocery trip", description: "", date: "Tomorrow" },
+];
 
 class task {
   constructor(title, description, time, type, completed) {
