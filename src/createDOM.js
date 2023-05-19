@@ -1,4 +1,4 @@
-const createNewDOMTask = function () {
+const createNewDOMTask = function (title, description) {
   const mainContent = document.querySelector(".main-content");
 
   const newTask = document.createElement("div");
@@ -15,6 +15,9 @@ const createNewDOMTask = function () {
   checkItem.classList.add("check-item");
   textContainer.classList.add("text-container");
   date.classList.add("time");
+
+  titleText.innerText = title;
+  descriptionContainer.innerText = description;
 
   mainContent.appendChild(newTask);
   newTask.appendChild(topContainer);
