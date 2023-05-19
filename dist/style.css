@@ -134,6 +134,7 @@ input:focus {
 }
 
 .description-container {
+  display: none;
   background-color: aliceblue;
   border-radius: 5px;
   border: 2px solid rgb(78, 78, 78);
