@@ -109,9 +109,15 @@ input:focus {
 
 .todo-item {
   display: flex;
+  flex-direction: column;
   gap: 5px;
   padding: 20px;
   border-top: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.top-item-container {
+  display: flex;
+  gap: 5px;
 }
 
 .check-item {
@@ -125,6 +131,14 @@ input:focus {
 .time {
   padding-top: 5px;
   font-size: 0.9rem;
+}
+
+.description-container {
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid rgb(78, 78, 78);
+  height: 150px;
+  width: 275px;
 }
 
 p {
