@@ -1,16 +1,21 @@
 const formContainer = document.querySelector(".form-container");
+const mainContent = document.querySelector(".main-content");
+const newTask = document.createElement("div");
+const topContainer = document.createElement("div");
+const descriptionContainer = document.createElement("div");
+const checkItem = document.createElement("div");
+const textContainer = document.createElement("div");
+const titleText = document.createElement("p");
+const date = document.createElement("div");
+
+export const createArrayTask = function (array) {
+  array.forEach((item) => {
+    console.log(item.title);
+    createNewDOMTask(item.title, item.description);
+  });
+};
 
 const createNewDOMTask = function (title, description) {
-  const mainContent = document.querySelector(".main-content");
-
-  const newTask = document.createElement("div");
-  const topContainer = document.createElement("div");
-  const descriptionContainer = document.createElement("div");
-  const checkItem = document.createElement("div");
-  const textContainer = document.createElement("div");
-  const titleText = document.createElement("p");
-  const date = document.createElement("div");
-
   newTask.classList.add("todo-item");
   topContainer.classList.add("top-item-container");
   descriptionContainer.classList.add("description-container");
