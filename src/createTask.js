@@ -1,4 +1,4 @@
-class project {
+/* class project {
   constructor(name, id) {
     this.name = name;
     this.id = id;
@@ -8,12 +8,14 @@ class project {
   addTask(task) {
     this.tasks.push(task);
   }
-}
+} */
+
+export const taskArray = [];
 
 class task {
   constructor(title, description, time, type, completed) {
     this.title = title;
-    this.height = description;
+    this.description = description;
     this.time = time;
     this.type = type;
     this.completed = completed;
