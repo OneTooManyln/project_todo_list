@@ -1,3 +1,5 @@
+const formContainer = document.querySelector(".form-container");
+
 const createNewDOMTask = function (title, description) {
   const mainContent = document.querySelector(".main-content");
 
@@ -39,10 +41,11 @@ export const displayDescription = function (target) {
 };
 
 export const displayTaskForm = function () {
-  const newTaskBtn = document.querySelector(".new-task");
-  const formContainer = document.querySelector(".form-container");
-
   formContainer.style.display = "flex";
+};
+
+export const hideTaskForm = function () {
+  formContainer.style.display = "none";
 };
 
 export default createNewDOMTask;
