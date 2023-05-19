@@ -1,8 +1,13 @@
-import { default as createNewDOMTask, displayDescription } from "./createDOM";
+import {
+  default as createNewDOMTask,
+  displayDescription,
+  displayTaskForm,
+} from "./createDOM";
 import { default as task, taskArray } from "./createTask";
 
 const form = document.querySelector("form");
 const todoItem = document.querySelectorAll(".todo-item");
+const newTaskBtn = document.querySelector(".new-task");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -20,4 +25,8 @@ todoItem.forEach((todoItem) => {
   todoItem.addEventListener("click", (e) => {
     displayDescription(e);
   });
+});
+
+newTaskBtn.addEventListener("click", () => {
+  displayTaskForm();
 });
