@@ -5,7 +5,7 @@ export const createArrayTask = function (array) {
   console.log("this works");
   array.forEach((item) => {
     console.log(item.title);
-    createNewDOMTask(item.title, item.description);
+    createNewDOMTask(item.title, item.description, item.date);
   });
 };
 
