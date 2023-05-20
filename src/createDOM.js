@@ -38,14 +38,14 @@ const createNewDOMTask = function (title, description, date) {
   textContainer.appendChild(time);
 };
 
-export const displayDescription = function (target) {
+export const displayDescription = function (element) {
   /* const descriptionContainer = document.querySelector(".description-container"); */
-  const currentElement = target.currentTarget.childNodes[3];
-  if (currentElement.style.display != "none") {
-    currentElement.style.display = "none";
+  /* const currentElement = target.currentTarget.childNodes[3];*/
+  if (element.children[1].style.display != "none") {
+    element.children[1].style.display = "none";
     console.log("this works");
-  } else currentElement.style.display = "flex";
-  console.log(target.currentTarget.childNodes[3]);
+  } else element.children[1].style.display = "flex";
+  console.log(element.children[1]);
 };
 
 export const displayTaskForm = function () {
