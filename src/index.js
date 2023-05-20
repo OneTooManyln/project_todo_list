@@ -36,7 +36,9 @@ form.addEventListener("submit", (e) => {
 /* body.forEach((body) => { */
 document.addEventListener("click", (e) => {
   const target = e.target.closest(".todo-item");
-  displayDescription(target);
+  if (e.target.closest(".todo-item")) {
+    displayDescription(target);
+  }
 });
 /* }); */
 
