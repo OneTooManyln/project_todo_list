@@ -8,7 +8,6 @@ import {
 import { default as task, taskArray } from "./createTask";
 
 const form = document.querySelector("form");
-const todoItem = document.querySelectorAll(".todo-item");
 const newTaskBtn = document.querySelector(".new-task");
 const mainContent = document.querySelector(".main-content");
 
@@ -34,11 +33,12 @@ form.addEventListener("submit", (e) => {
 
   createArrayTask(taskArray);
 });
-todoItem.forEach((todoItem) => {
-  todoItem.addEventListener("click", (e) => {
-    displayDescription(e);
-  });
+/* body.forEach((body) => { */
+document.addEventListener("click", (e) => {
+  const target = e.target.closest(".todo-item");
+  displayDescription(target);
 });
+/* }); */
 
 newTaskBtn.addEventListener("click", () => {
   displayTaskForm();
