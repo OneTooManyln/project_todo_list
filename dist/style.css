@@ -54,8 +54,8 @@ ul {
   padding: 10px 20px;
   background-color: aliceblue;
   border-radius: 5px;
-  width: 500px;
-  height: 250px;
+  width: 550px;
+  height: 300px;
 }
 
 form {
@@ -91,6 +91,12 @@ input:focus {
   flex: 1;
 }
 
+.task-date-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .form-bottom-container {
   display: flex;
   justify-content: space-between;
@@ -110,10 +116,7 @@ input:focus {
   border: 2px solid rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   font-weight: bold;
-}
-
-element.style {
-  display: none;
+  font-size: 0.85rem;
 }
 
 #type-work,
