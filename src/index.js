@@ -10,6 +10,9 @@ import { default as task, taskArray } from "./createTask";
 const form = document.querySelector("form");
 const newTaskBtn = document.querySelector(".new-task");
 const mainContent = document.querySelector(".main-content");
+const titleInput = document.querySelector("#task-title");
+const descriptionInput = document.querySelector("#task-description");
+const dateInput = document.querySelector("#task-date");
 
 createArrayTask(taskArray);
 
@@ -24,10 +27,11 @@ form.addEventListener("submit", (e) => {
   hideTaskForm();
   clearLists();
 
-  const titleInput = document.querySelector("#task-title");
-  const descriptionInput = document.querySelector("#task-description");
-
-  const newTask = new task(titleInput.value, descriptionInput.value);
+  const newTask = new task(
+    titleInput.value,
+    descriptionInput.value,
+    dateInput.value
+  );
   taskArray.push(newTask);
   console.table(taskArray);
 
