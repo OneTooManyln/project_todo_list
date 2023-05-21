@@ -5,11 +5,17 @@ export const createArrayTask = function (array) {
   console.log("this works");
   array.forEach((item) => {
     console.log(item.title);
-    createNewDOMTask(item.title, item.description, item.date);
+    createNewDOMTask(
+      item.title,
+      item.description,
+      item.date,
+      item.type,
+      item.completed
+    );
   });
 };
 
-const createNewDOMTask = function (title, description, date) {
+const createNewDOMTask = function (title, description, date, type, completed) {
   const newTask = document.createElement("div");
   const topContainer = document.createElement("div");
   const descriptionContainer = document.createElement("div");
