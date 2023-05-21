@@ -112,12 +112,8 @@ input:focus {
   font-weight: bold;
 }
 
-.type-work-class {
-  color: green;
-}
-
-.type-personal-class {
-  color: purple;
+element.style {
+  display: none;
 }
 
 #type-work,
