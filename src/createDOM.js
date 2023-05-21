@@ -41,11 +41,13 @@ const createNewDOMTask = function (title, description, date) {
 export const displayDescription = function (element) {
   /* const descriptionContainer = document.querySelector(".description-container"); */
   /* const currentElement = target.currentTarget.childNodes[3];*/
-  if (element.children[1].style.display != "none") {
+  if (element.children[1].style.display == "flex") {
     element.children[1].style.display = "none";
-    console.log("this works");
-  } else element.children[1].style.display = "flex";
-  console.log(element.children[1]);
+    console.log("this works 2");
+  } else {
+    element.children[1].style.display = "flex";
+    console.log(element.children[1]);
+  }
 };
 
 export const displayTaskForm = function () {
