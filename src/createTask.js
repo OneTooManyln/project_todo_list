@@ -16,10 +16,10 @@ export const taskArray = [
 ];
 
 class task {
-  constructor(title, description, time, type, completed) {
+  constructor(title, description, date, type, completed) {
     this.title = title;
     this.description = description;
-    this.time = time;
+    this.date = date;
     this.type = type;
     this.completed = completed;
   }
