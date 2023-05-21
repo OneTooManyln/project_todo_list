@@ -23,6 +23,10 @@ const clearLists = function () {
 };
 
 form.addEventListener("submit", (e) => {
+  let selectedTypeInput = document.querySelector(
+    'input[name="choice"]:checked'
+  );
+
   e.preventDefault();
   hideTaskForm();
   clearLists();
@@ -30,21 +34,21 @@ form.addEventListener("submit", (e) => {
   const newTask = new task(
     titleInput.value,
     descriptionInput.value,
-    dateInput.value
+    dateInput.value,
+    selectedTypeInput.value
   );
   taskArray.push(newTask);
   console.table(taskArray);
 
   createArrayTask(taskArray);
 });
-/* body.forEach((body) => { */
+
 document.addEventListener("click", (e) => {
   const target = e.target.closest(".todo-item");
   if (e.target.closest(".todo-item")) {
     displayDescription(target);
   }
 });
-/* }); */
 
 newTaskBtn.addEventListener("click", () => {
   displayTaskForm();
