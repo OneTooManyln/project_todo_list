@@ -48,16 +48,17 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   textContainer.appendChild(time);
 };
 
-export const displayDescription = function (element) {
+export const displayDescription = function (element, event) {
   /* const descriptionContainer = document.querySelector(".description-container"); */
   /* const currentElement = target.currentTarget.childNodes[3];*/
-  if (element.children[1].style.display == "flex") {
-    element.children[1].style.display = "none";
+  if (element.parentNode.parentNode.childNodes[1].style.display == "flex") {
+    element.parentNode.parentNode.childNodes[1].style.display = "none";
     console.log("this works 2");
   } else {
-    element.children[1].style.display = "flex";
-    console.log(element.children[1]);
+    element.parentNode.parentNode.childNodes[1].style.display = "flex";
+    console.log(element.parentNode.parentNode.childNodes[1]);
   }
+  console.log(element.parentNode.parentNode.childNodes[1]);
 };
 
 export const displayTaskForm = function () {
