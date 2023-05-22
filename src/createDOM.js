@@ -23,6 +23,7 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   const textContainer = document.createElement("div");
   const titleText = document.createElement("p");
   const time = document.createElement("div");
+  const showDescriptionBtn = document.createElement("button");
 
   newTask.classList.add("todo-item");
   topContainer.classList.add("top-item-container");
@@ -30,16 +31,19 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   checkItem.classList.add("check-item");
   textContainer.classList.add("text-container");
   time.classList.add("time");
+  showDescriptionBtn.classList.add("show-description-btn");
 
   titleText.innerText = title;
   descriptionContainer.innerText = description;
   time.innerText = date;
+  showDescriptionBtn.innerText = "Description";
 
   mainContent.appendChild(newTask);
   newTask.appendChild(topContainer);
   newTask.appendChild(descriptionContainer);
   topContainer.appendChild(checkItem);
   topContainer.appendChild(textContainer);
+  topContainer.appendChild(showDescriptionBtn);
   textContainer.appendChild(titleText);
   textContainer.appendChild(time);
 };
