@@ -41,6 +41,11 @@ body {
   flex-direction: column;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
 li {
   padding: 10px 20px;
   font-size: 1rem;
@@ -50,16 +55,17 @@ li:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 10px;
+#projects-menu-btn-dropdown-container {
+  margin-left: 20px;
+  font-size: 0.9rem;
+  color: rgb(77, 77, 77);
 }
 
 .new-task,
 .new-project {
   border: none;
   background-color: white;
-  margin-left: 10px;
+  margin-left: 20px;
   font-size: 1rem;
   padding: 10px;
   text-align: left;
