@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -30,13 +36,18 @@ body {
   padding: 20px;
 }
 
+.menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
 li {
   padding: 10px 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 li:hover {
-  background-color: rgba(128, 128, 128, 0.226);
+  background-color: rgba(128, 128, 128, 0.123);
 }
 
 ul {
@@ -44,15 +55,19 @@ ul {
   padding-left: 10px;
 }
 
-.new-task {
+.new-task,
+.new-project {
   border: none;
   background-color: white;
-  font-size: 1.5rem;
+  margin-left: 10px;
+  font-size: 1rem;
   padding: 10px;
+  text-align: left;
 }
 
-.new-task:hover {
-  background-color: rgba(128, 128, 128, 0.226);
+.new-task:hover,
+.new-project:hover {
+  background-color: rgba(128, 128, 128, 0.123);
 }
 
 .form-container {
