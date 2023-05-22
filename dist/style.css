@@ -184,6 +184,7 @@ input:focus {
 
 .top-item-container {
   display: flex;
+  justify-content: space-between;
   gap: 5px;
 }
 
@@ -193,6 +194,19 @@ input:focus {
   margin-top: 3px;
   height: 9px;
   width: 9px;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.show-description-btn {
+  background-color: rgb(164, 201, 231);
+  border: 1px solid black;
+  margin: 0;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 20px;
 }
 
 .time {
