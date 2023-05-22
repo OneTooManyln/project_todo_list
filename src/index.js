@@ -44,8 +44,8 @@ form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  const target = e.target.closest(".todo-item");
-  if (e.target.closest(".todo-item")) {
+  const target = e.target.closest(".show-description-btn");
+  if (e.target.closest(".show-description-btn")) {
     displayDescription(target);
   }
 });
