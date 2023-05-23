@@ -1,4 +1,4 @@
-/* class project {
+export class project {
   constructor(name, id) {
     this.name = name;
     this.id = id;
@@ -8,11 +8,23 @@
   addTask(task) {
     this.tasks.push(task);
   }
-} */
+}
 
 export const taskArray = [
-  { title: "Workout session", description: "", date: "10:00 PM" },
-  { title: "Grocery trip", description: "", date: "Tomorrow" },
+  {
+    title: "Workout session",
+    description: "",
+    date: "10:00 PM",
+    type: "personal",
+    completed: false,
+  },
+  {
+    title: "Grocery trip",
+    description: "",
+    date: "Tomorrow",
+    type: "personal",
+    completed: false,
+  },
 ];
 
 class task {
