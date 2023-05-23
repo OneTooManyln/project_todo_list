@@ -18,5 +18,8 @@
   "homepage": "https://github.com/OneTooManyln/project_todo_list#readme",
   "devDependencies": {
     "webpack": "^5.82.1"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0"
   }
 }
