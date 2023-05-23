@@ -77,6 +77,50 @@ li:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
 
+.project-form-container {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 450px;
+  height: 200px;
+}
+
+.project-form-header {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+}
+
+.form-input-container {
+  flex: 1;
+}
+
+#project-name {
+  padding: 0;
+  font-size: 1rem;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 95%;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit-project {
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(164, 201, 231);
+  border-radius: 2.5px;
+  border: none;
+  font-size: 1rem;
+}
+
 .form-container {
   display: none;
   flex-direction: column;
