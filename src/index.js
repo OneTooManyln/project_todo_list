@@ -4,8 +4,9 @@ import {
   displayTaskForm,
   hideTaskForm,
   createArrayTask,
+  displayProjectForm,
 } from "./createDOM";
-import { default as task, taskArray } from "./createTask";
+import { default as task, taskArray } from "./classes";
 
 const form = document.querySelector("#task-form");
 const newTaskBtn = document.querySelector(".new-task");
@@ -13,6 +14,7 @@ const mainContent = document.querySelector(".main-content");
 const titleInput = document.querySelector("#task-title");
 const descriptionInput = document.querySelector("#task-description");
 const dateInput = document.querySelector("#task-date");
+const newProjectBtn = document.querySelector(".new-project");
 
 createArrayTask(taskArray);
 
@@ -52,4 +54,9 @@ document.addEventListener("click", (e) => {
 
 newTaskBtn.addEventListener("click", () => {
   displayTaskForm();
+});
+
+// display new project form
+newProjectBtn.addEventListener("click", () => {
+  displayProjectForm();
 });
