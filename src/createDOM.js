@@ -1,4 +1,5 @@
 const formContainer = document.querySelector(".form-container");
+const projectFormContainer = document.querySelector(".project-form-container");
 const mainContent = document.querySelector(".main-content");
 
 export const createArrayTask = function (array) {
@@ -67,6 +68,10 @@ export const displayTaskForm = function () {
 
 export const hideTaskForm = function () {
   formContainer.style.display = "none";
+};
+
+export const displayProjectForm = function () {
+  projectFormContainer.style.display = "flex";
 };
 
 export default createNewDOMTask;
