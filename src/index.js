@@ -6,15 +6,17 @@ import {
   createArrayTask,
   displayProjectForm,
 } from "./createDOM";
-import { default as task, taskArray } from "./classes";
+import { default as task, taskArray, project, projectArray } from "./classes";
 
 const form = document.querySelector("#task-form");
+const projectForm = document.querySelector("#project-form");
 const newTaskBtn = document.querySelector(".new-task");
 const mainContent = document.querySelector(".main-content");
 const titleInput = document.querySelector("#task-title");
 const descriptionInput = document.querySelector("#task-description");
 const dateInput = document.querySelector("#task-date");
 const newProjectBtn = document.querySelector(".new-project");
+const projectNameInput = document.querySelector("#project-name");
 
 createArrayTask(taskArray);
 
@@ -43,6 +45,15 @@ form.addEventListener("submit", (e) => {
   console.table(taskArray);
 
   createArrayTask(taskArray);
+});
+
+//handle project form submit
+projectForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const newProject = new project(projectNameInput.value);
+  projectArray.push(newProject);
+  console.table(projectArray);
 });
 
 document.addEventListener("click", (e) => {
