@@ -7,7 +7,7 @@ import {
 } from "./createDOM";
 import { default as task, taskArray } from "./createTask";
 
-const form = document.querySelector("form");
+const form = document.querySelector("#task-form");
 const newTaskBtn = document.querySelector(".new-task");
 const mainContent = document.querySelector(".main-content");
 const titleInput = document.querySelector("#task-title");
