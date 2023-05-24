@@ -1,12 +1,23 @@
 export class project {
-  constructor(name, id) {
+  constructor(name) {
     this.name = name;
-    this.id = id;
     this.tasks = [];
   }
 
   addTask(task) {
     this.tasks.push(task);
+  }
+}
+
+export const projectArray = [{ name: "My Projects" }];
+
+class task {
+  constructor(title, description, date, type, completed) {
+    this.title = title;
+    this.description = description;
+    this.date = date;
+    this.type = type;
+    this.completed = completed;
   }
 }
 
@@ -26,15 +37,5 @@ export const taskArray = [
     completed: false,
   },
 ];
-
-class task {
-  constructor(title, description, date, type, completed) {
-    this.title = title;
-    this.description = description;
-    this.date = date;
-    this.type = type;
-    this.completed = completed;
-  }
-}
 
 export default task;
