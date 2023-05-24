@@ -44,6 +44,7 @@ body {
 ul {
   list-style-type: none;
   padding-left: 10px;
+  margin-bottom: 50px;
 }
 
 li {
@@ -55,11 +56,19 @@ li:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
 
-#projects-menu-btn-dropdown-container {
-  display: none;
-  margin-left: 20px;
-  font-size: 0.9rem;
-  color: rgb(77, 77, 77);
+.project-container {
+  margin-bottom: 100px;
+}
+
+.project-title {
+  font-size: 1rem;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+
+.project-title:hover {
+  background-color: rgba(128, 128, 128, 0.123);
 }
 
 .new-task,
@@ -119,6 +128,7 @@ li:hover {
   border-radius: 2.5px;
   border: none;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .form-container {
