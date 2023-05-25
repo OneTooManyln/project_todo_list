@@ -19,6 +19,7 @@ const dateInput = document.querySelector("#task-date");
 const newProjectBtn = document.querySelector(".new-project");
 const projectNameInput = document.querySelector("#project-name");
 
+createArrayProject(projectArray);
 createArrayTask(taskArray);
 
 const clearLists = function () {
