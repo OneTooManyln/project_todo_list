@@ -67,6 +67,7 @@ export const createArrayProject = function (array) {
   array.forEach((item) => {
     const projectItem = document.createElement("li");
     projectItem.classList.add("project-item");
+    projectItem.dataset.projectId = item.id;
     projectItem.innerText = item.name;
     projectUL.appendChild(projectItem);
 
