@@ -13,6 +13,7 @@ const form = document.querySelector("#task-form");
 const projectForm = document.querySelector("#project-form");
 const newTaskBtn = document.querySelector(".new-task");
 const mainContent = document.querySelector(".main-content");
+const projectList = document.querySelector(".projects-list ul");
 const titleInput = document.querySelector("#task-title");
 const descriptionInput = document.querySelector("#task-description");
 const dateInput = document.querySelector("#task-date");
@@ -22,9 +23,9 @@ const projectNameInput = document.querySelector("#project-name");
 createArrayProject(projectArray);
 createArrayTask(taskArray);
 
-const clearLists = function () {
-  while (mainContent.firstChild) {
-    mainContent.removeChild(mainContent.firstChild);
+const clearLists = function (element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
   }
 };
 
@@ -35,7 +36,7 @@ form.addEventListener("submit", (e) => {
 
   e.preventDefault();
   hideTaskForm();
-  clearLists();
+  clearLists(mainContent);
 
   const newTask = new task(
     titleInput.value,
@@ -52,6 +53,7 @@ form.addEventListener("submit", (e) => {
 //handle project form submit
 projectForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  clearLists(projectList);
 
   const newProject = new project(projectNameInput.value);
   projectArray.push(newProject);
