@@ -67,10 +67,6 @@ li:hover {
   border-bottom: 1px solid black;
 }
 
-.project-title:hover {
-  background-color: rgba(128, 128, 128, 0.123);
-}
-
 .new-task,
 .new-project {
   border: none;
