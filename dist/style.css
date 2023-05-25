@@ -65,7 +65,6 @@ li:hover {
   border-bottom: 1px solid black;
 }
 
-.new-task,
 .new-project {
   border: none;
   background-color: white;
@@ -75,7 +74,6 @@ li:hover {
   text-align: left;
 }
 
-.new-task:hover,
 .new-project:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
@@ -84,6 +82,23 @@ li:hover {
   flex: 1;
   padding: 20px;
   background-color: rgb(164, 201, 231);
+}
+
+.new-task-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.new-task {
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: rgb(164, 201, 231);
+}
+
+.new-task:hover {
+  background-color: rgba(255, 255, 255, 0.164);
 }
 
 .main-content-title {
