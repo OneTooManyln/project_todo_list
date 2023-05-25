@@ -62,6 +62,18 @@ export const displayDescription = function (element, event) {
   console.log(element.parentNode.parentNode.childNodes[1]);
 };
 
+export const createArrayProject = function (array) {
+  const projectUL = document.querySelector(".projects-list ul");
+  array.forEach((item) => {
+    const projectItem = document.createElement("li");
+    projectItem.classList.add("project-item");
+    projectItem.innerText = item.name;
+    projectUL.appendChild(projectItem);
+
+    console.log(item.name);
+  });
+};
+
 export const displayTaskForm = function () {
   formContainer.style.display = "flex";
 };
