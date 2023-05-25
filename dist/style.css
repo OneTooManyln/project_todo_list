@@ -80,6 +80,74 @@ li:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
 
+.main-content-container {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(164, 201, 231);
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  border-top: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.todo-item:hover {
+  background-color: rgba(255, 255, 255, 0.164);
+}
+
+.top-item-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.check-item {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 3px;
+  height: 9px;
+  width: 9px;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.show-description-btn {
+  background-color: rgb(164, 201, 231);
+  border: 1px solid black;
+  margin: 0;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.time {
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+
+.description-container {
+  display: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid rgb(78, 78, 78);
+  height: 150px;
+  width: 275px;
+}
+
+p {
+  margin: 0px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Forms styles */
 .project-form-container {
   display: none;
   flex-direction: column;
@@ -211,71 +279,4 @@ input:focus {
   border: 1px solid black;
   background-color: aliceblue;
   height: 20px;
-}
-
-.main-content-container {
-  flex: 1;
-  padding: 20px;
-  background-color: rgb(164, 201, 231);
-}
-
-.todo-item {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 20px;
-  border-top: 2px solid rgba(0, 0, 0, 0.7);
-}
-
-.todo-item:hover {
-  background-color: rgba(255, 255, 255, 0.164);
-}
-
-.top-item-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
-}
-
-.check-item {
-  border: 1px solid black;
-  border-radius: 2px;
-  margin-top: 3px;
-  height: 9px;
-  width: 9px;
-}
-
-.text-container {
-  flex: 1;
-}
-
-.show-description-btn {
-  background-color: rgb(164, 201, 231);
-  border: 1px solid black;
-  margin: 0;
-  height: 25px;
-  border-radius: 5px;
-  margin-right: 20px;
-}
-
-.time {
-  padding-top: 5px;
-  font-size: 0.9rem;
-}
-
-.description-container {
-  display: none;
-  background-color: aliceblue;
-  border-radius: 5px;
-  border: 2px solid rgb(78, 78, 78);
-  height: 150px;
-  width: 275px;
-}
-
-p {
-  margin: 0px;
-}
-
-h3 {
-  margin: 0;
 }
