@@ -5,6 +5,7 @@ import {
   hideTaskForm,
   createArrayTask,
   displayProjectForm,
+  createArrayProject,
 } from "./createDOM";
 import { default as task, taskArray, project, projectArray } from "./classes";
 
@@ -54,6 +55,7 @@ projectForm.addEventListener("submit", (e) => {
   const newProject = new project(projectNameInput.value);
   projectArray.push(newProject);
   console.table(projectArray);
+  createArrayProject(projectArray);
 });
 
 document.addEventListener("click", (e) => {
