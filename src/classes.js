@@ -1,6 +1,7 @@
 export class project {
   constructor(name) {
     this.name = name;
+    this.id = id;
     this.tasks = [];
   }
 
@@ -9,7 +10,7 @@ export class project {
   }
 }
 
-export const projectArray = [{ name: "My Project" }];
+export const projectArray = [{ name: "My Project", id: 1 }];
 
 class task {
   constructor(title, description, date, type, completed) {
