@@ -55,7 +55,7 @@ projectForm.addEventListener("submit", (e) => {
   e.preventDefault();
   clearLists(projectList);
 
-  const newProject = new project(projectNameInput.value);
+  const newProject = new project(projectNameInput.value, Date.now().toString());
   projectArray.push(newProject);
   console.table(projectArray);
   createArrayProject(projectArray);
