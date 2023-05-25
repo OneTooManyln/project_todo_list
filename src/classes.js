@@ -9,7 +9,7 @@ export class project {
   }
 }
 
-export const projectArray = [{ name: "My Projects" }];
+export const projectArray = [{ name: "My Project" }];
 
 class task {
   constructor(title, description, date, type, completed) {
