@@ -50,6 +50,8 @@ ul {
 li {
   padding: 10px 20px;
   font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: rgb(164, 201, 231);
 }
 
 li:hover {
