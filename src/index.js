@@ -29,12 +29,12 @@ const clearLists = function (element) {
   }
 };
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  hideTaskForm();
-  clearLists(mainContent);
-  createTask(e);
-});
+const createProject = function () {
+  const newProject = new project(projectNameInput.value, Date.now().toString());
+  projectArray.push(newProject);
+  console.table(projectArray);
+  createArrayProject(projectArray);
+};
 
 const createTask = function (e) {
   let selectedTypeInput = document.querySelector(
@@ -53,15 +53,18 @@ const createTask = function (e) {
   createArrayTask(taskArray);
 };
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  hideTaskForm();
+  clearLists(mainContent);
+  createTask(e);
+});
+
 //handle project form submit
 projectForm.addEventListener("submit", (e) => {
   e.preventDefault();
   clearLists(projectList);
-
-  const newProject = new project(projectNameInput.value, Date.now().toString());
-  projectArray.push(newProject);
-  console.table(projectArray);
-  createArrayProject(projectArray);
+  createProject();
 });
 
 document.addEventListener("click", (e) => {
