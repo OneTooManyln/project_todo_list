@@ -30,13 +30,16 @@ const clearLists = function (element) {
 };
 
 form.addEventListener("submit", (e) => {
-  let selectedTypeInput = document.querySelector(
-    'input[name="choice"]:checked'
-  );
-
   e.preventDefault();
   hideTaskForm();
   clearLists(mainContent);
+  createTask(e);
+});
+
+const createTask = function (e) {
+  let selectedTypeInput = document.querySelector(
+    'input[name="choice"]:checked'
+  );
 
   const newTask = new task(
     titleInput.value,
@@ -48,7 +51,7 @@ form.addEventListener("submit", (e) => {
   console.table(taskArray);
 
   createArrayTask(taskArray);
-});
+};
 
 //handle project form submit
 projectForm.addEventListener("submit", (e) => {
