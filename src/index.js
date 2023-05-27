@@ -19,15 +19,31 @@ const descriptionInput = document.querySelector("#task-description");
 const dateInput = document.querySelector("#task-date");
 const newProjectBtn = document.querySelector(".new-project");
 const projectNameInput = document.querySelector("#project-name");
+let selectedProject = projectArray.find(
+  (projectArray) => projectArray.name === "My Project"
+);
+
+console.log(selectedProject);
 
 createArrayProject(projectArray);
-createArrayTask(taskArray);
+/* createArrayTask(taskArray); */
 
 const clearLists = function (element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
 };
+
+const initialRender = function (element) {
+  clearLists(mainContent);
+  const mainContentTitle = document.querySelector(".main-content-title");
+  mainContentTitle.textContent = element.name;
+
+  //render project tasks
+  createArrayTask(selectedProject.tasks);
+};
+
+initialRender(selectedProject);
 
 const createProject = function () {
   const newProject = new project(projectNameInput.value, Date.now().toString());
