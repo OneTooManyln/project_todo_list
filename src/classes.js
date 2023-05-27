@@ -10,7 +10,28 @@ export class project {
   }
 }
 
-export const projectArray = [{ name: "My Project", id: 1 }];
+export const projectArray = [
+  {
+    name: "My Project",
+    id: 1,
+    tasks: [
+      {
+        title: "Workout session",
+        description: "",
+        date: "10:00 PM",
+        type: "personal",
+        completed: false,
+      },
+      {
+        title: "Grocery trip",
+        description: "",
+        date: "Tomorrow",
+        type: "personal",
+        completed: false,
+      },
+    ],
+  },
+];
 
 class task {
   constructor(title, description, date, type, completed) {
@@ -22,21 +43,6 @@ class task {
   }
 }
 
-export const taskArray = [
-  {
-    title: "Workout session",
-    description: "",
-    date: "10:00 PM",
-    type: "personal",
-    completed: false,
-  },
-  {
-    title: "Grocery trip",
-    description: "",
-    date: "Tomorrow",
-    type: "personal",
-    completed: false,
-  },
-];
+export const taskArray = [];
 
 export default task;
