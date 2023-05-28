@@ -40,7 +40,7 @@ const initialRender = function (element) {
   mainContentTitle.textContent = element.name;
 
   //render project tasks
-  createArrayTask(selectedProject.tasks);
+  createArrayTask(element.tasks);
 };
 
 initialRender(selectedProject);
@@ -97,4 +97,17 @@ newTaskBtn.addEventListener("click", () => {
 // display new project form
 newProjectBtn.addEventListener("click", () => {
   displayProjectForm();
+});
+
+// add listener to projects to display its tasks
+document.addEventListener("click", (e) => {
+  console.log(selectedProject);
+  if (e.target.closest(".project-item")) {
+    const selectedProject = projectArray.find(
+      (projectArray) =>
+        projectArray.id == e.target.getAttribute("data-project-id")
+    );
+    initialRender(selectedProject);
+    console.log(selectedProject);
+  }
 });
