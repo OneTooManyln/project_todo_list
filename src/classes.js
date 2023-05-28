@@ -31,6 +31,19 @@ export const projectArray = [
       },
     ],
   },
+  {
+    name: "My Newer Project",
+    id: 2,
+    tasks: [
+      {
+        title: "Do Homework",
+        description: "Finish Learing ABC's",
+        date: "2023-05-31",
+        type: "personal",
+        completed: true,
+      },
+    ],
+  },
 ];
 
 class task {
