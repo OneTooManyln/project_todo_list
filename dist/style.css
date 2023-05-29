@@ -36,7 +36,7 @@ body {
   padding: 20px;
 }
 
-.menu-items {
+.sidebar-container {
   display: flex;
   flex-direction: column;
 }
@@ -58,7 +58,8 @@ li:hover {
   background-color: rgba(128, 128, 128, 0.123);
 }
 
-.project-title {
+.project-title,
+.menu-items-title {
   font-size: 1rem;
   margin-left: 10px;
   padding: 10px 20px;
@@ -68,7 +69,7 @@ li:hover {
 .new-project {
   border: none;
   background-color: white;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 1rem;
   padding: 10px;
   text-align: left;
@@ -104,7 +105,7 @@ li:hover {
 .main-content-title {
   font-size: 1.75rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .todo-item {
