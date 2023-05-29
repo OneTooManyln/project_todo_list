@@ -6,6 +6,7 @@ import {
   createArrayTask,
   displayProjectForm,
   createArrayProject,
+  hideProjectForm,
 } from "./createDOM";
 import { default as task, taskArray, project, projectArray } from "./classes";
 
@@ -79,6 +80,7 @@ form.addEventListener("submit", (e) => {
 //handle project form submit
 projectForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  hideProjectForm();
   clearLists(projectList);
   createProject();
 });
