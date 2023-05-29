@@ -72,7 +72,7 @@ const createTask = function (e) {
   selectedProject.tasks.push(newTask);
   console.log(selectedProject.tasks);
 
-  createArrayTask(taskArray);
+  createArrayTask(selectedProject.tasks);
 };
 
 form.addEventListener("submit", (e) => {
