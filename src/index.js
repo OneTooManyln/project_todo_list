@@ -35,7 +35,7 @@ const clearLists = function (element) {
   }
 };
 
-const initialRender = function (element) {
+const render = function (element) {
   clearLists(mainContent);
   const mainContentTitle = document.querySelector(".main-content-title");
   mainContentTitle.textContent = element.name;
@@ -44,13 +44,17 @@ const initialRender = function (element) {
   createArrayTask(element.tasks);
 };
 
-initialRender(selectedProject);
+render(selectedProject);
 
 const createProject = function () {
   const newProject = new project(projectNameInput.value, Date.now().toString());
   projectArray.push(newProject);
   console.table(projectArray);
   createArrayProject(projectArray);
+
+  selectedProject = newProject;
+  render(selectedProject);
+  console.log(selectedProject);
 };
 
 const createTask = function (e) {
@@ -64,8 +68,9 @@ const createTask = function (e) {
     dateInput.value,
     selectedTypeInput.value
   );
-  taskArray.push(newTask);
-  console.table(taskArray);
+  console.log(selectedProject);
+  selectedProject.tasks.push(newTask);
+  console.log(selectedProject.tasks);
 
   createArrayTask(taskArray);
 };
@@ -103,13 +108,12 @@ newProjectBtn.addEventListener("click", () => {
 
 // add listener to projects to display its tasks
 document.addEventListener("click", (e) => {
-  console.log(selectedProject);
   if (e.target.closest(".project-item")) {
-    const selectedProject = projectArray.find(
+    selectedProject = projectArray.find(
       (projectArray) =>
         projectArray.id == e.target.getAttribute("data-project-id")
     );
-    initialRender(selectedProject);
+    render(selectedProject);
     console.log(selectedProject);
   }
 });
