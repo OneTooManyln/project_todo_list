@@ -88,3 +88,7 @@ export const displayProjectForm = function () {
 };
 
 export default createNewDOMTask;
+
+export const hideProjectForm = function () {
+  projectFormContainer.style.display = "none";
+};
