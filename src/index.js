@@ -7,8 +7,10 @@ import {
   displayProjectForm,
   createArrayProject,
   hideProjectForm,
+  renderTitle,
 } from "./createDOM";
 import { default as task, taskArray, project, projectArray } from "./classes";
+import { isThisWeek, isToday, parse } from "date-fns";
 
 const form = document.querySelector("#task-form");
 const projectForm = document.querySelector("#project-form");
@@ -35,16 +37,15 @@ const clearLists = function (element) {
   }
 };
 
-const render = function (element) {
+const render = function (element, title) {
   clearLists(mainContent);
-  const mainContentTitle = document.querySelector(".main-content-title");
-  mainContentTitle.textContent = element.name;
+  renderTitle(title);
 
   //render project tasks
   createArrayTask(element.tasks);
 };
 
-render(selectedProject);
+render(selectedProject, selectedProject.name);
 
 const createProject = function () {
   const newProject = new project(projectNameInput.value, Date.now().toString());
@@ -53,7 +54,7 @@ const createProject = function () {
   createArrayProject(projectArray);
 
   selectedProject = newProject;
-  render(selectedProject);
+  render(selectedProject, selectedProject.name);
   console.log(selectedProject);
 };
 
@@ -113,7 +114,63 @@ document.addEventListener("click", (e) => {
       (projectArray) =>
         projectArray.id == e.target.getAttribute("data-project-id")
     );
-    render(selectedProject);
+    render(selectedProject, selectedProject.name);
     console.log(selectedProject);
   }
 });
+
+// add listener to menu btns to display its tasks
+document.addEventListener("click", (e) => {
+  getClickedMenuBtn(e);
+});
+
+const getClickedMenuBtn = function (e) {
+  if (e.target.closest("#inbox-menu-btn")) {
+    displayAllTasks();
+  } else if (e.target.closest("#today-menu-btn")) {
+    displayTodayTasks();
+  } else if (e.target.closest("#week-menu-btn")) {
+    displayThisWeeksTasks();
+  } else console.log("error");
+};
+
+const displayAllTasks = function () {
+  const allTasks = [];
+  projectArray.forEach((projectArray) => {
+    projectArray.tasks.forEach((task) => {
+      clearLists(mainContent);
+      allTasks.push(task);
+      renderTitle("INBOX");
+      createArrayTask(allTasks);
+    });
+  });
+};
+
+const displayTodayTasks = function () {
+  const todayTasks = [];
+  projectArray.forEach((projectArray) => {
+    projectArray.tasks.forEach((task) => {
+      if (isToday(parse(task.date, "yyyy-MM-dd", new Date()))) {
+        console.table(task);
+        clearLists(mainContent);
+        todayTasks.push(task);
+        renderTitle("TODAY");
+        createArrayTask(todayTasks);
+      }
+    });
+  });
+};
+
+const displayThisWeeksTasks = function () {
+  const thisWeeksTasks = [];
+  projectArray.forEach((projectArray) => {
+    projectArray.tasks.forEach((task) => {
+      if (isThisWeek(parse(task.date, "yyyy-MM-dd", new Date()))) {
+        clearLists(mainContent);
+        thisWeeksTasks.push(task);
+        renderTitle("WEEK");
+        createArrayTask(thisWeeksTasks);
+      }
+    });
+  });
+};
