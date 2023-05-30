@@ -18,14 +18,14 @@ export const projectArray = [
       {
         title: "Workout session",
         description: "",
-        date: "10:00 PM",
+        date: "2023-05-30",
         type: "personal",
         completed: false,
       },
       {
         title: "Grocery trip",
         description: "",
-        date: "Tomorrow",
+        date: "2023-05-31",
         type: "personal",
         completed: false,
       },
@@ -37,7 +37,7 @@ export const projectArray = [
     tasks: [
       {
         title: "Do Homework",
-        description: "Finish Learing ABC's",
+        description: "Finish Learning ABC's",
         date: "2023-05-31",
         type: "personal",
         completed: true,
