@@ -75,6 +75,11 @@ export const createArrayProject = function (array) {
   });
 };
 
+export const renderTitle = function (title) {
+  const mainContentTitle = document.querySelector(".main-content-title");
+  mainContentTitle.textContent = title;
+};
+
 export const displayTaskForm = function () {
   formContainer.style.display = "flex";
 };
