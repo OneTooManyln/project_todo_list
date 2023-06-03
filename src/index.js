@@ -9,8 +9,9 @@ import {
   hideProjectForm,
   renderTitle,
 } from "./createDOM";
-import { default as task, taskArray, project, projectArray } from "./classes";
+import { default as task, taskArray, project } from "./classes";
 import { isThisWeek, isToday, parse } from "date-fns";
+import projectArray from "./storage";
 
 const form = document.querySelector("#task-form");
 const projectForm = document.querySelector("#project-form");
