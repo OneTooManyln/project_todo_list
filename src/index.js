@@ -32,6 +32,10 @@ console.log(selectedProject);
 createArrayProject(projectArray);
 /* createArrayTask(taskArray); */
 
+const save = function () {
+  localStorage.setItem("projects", JSON.stringify(projectArray));
+};
+
 const clearLists = function (element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
@@ -41,6 +45,7 @@ const clearLists = function (element) {
 const render = function (element, title) {
   clearLists(mainContent);
   renderTitle(title);
+  save();
 
   //render project tasks
   createArrayTask(element.tasks);
@@ -56,6 +61,7 @@ const createProject = function () {
 
   selectedProject = newProject;
   render(selectedProject, selectedProject.name);
+  save();
   console.log(selectedProject);
 };
 
@@ -75,6 +81,8 @@ const createTask = function (e) {
   console.log(selectedProject.tasks);
 
   createArrayTask(selectedProject.tasks);
+  console.table(projectArray);
+  save();
 };
 
 const getClickedMenuBtn = function (e) {
@@ -84,7 +92,7 @@ const getClickedMenuBtn = function (e) {
     displayTodayTasks();
   } else if (e.target.closest("#week-menu-btn")) {
     displayThisWeeksTasks();
-  } else console.log("error");
+  }
 };
 
 const displayAllTasks = function () {
