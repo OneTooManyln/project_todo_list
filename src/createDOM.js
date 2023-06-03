@@ -3,9 +3,8 @@ const projectFormContainer = document.querySelector(".project-form-container");
 const mainContent = document.querySelector(".main-content");
 
 export const createArrayTask = function (array) {
-  console.log("this works");
   array.forEach((item) => {
-    console.log(item.title);
+    /* console.log(item.title); */
     createNewDOMTask(
       item.title,
       item.description,
@@ -54,7 +53,7 @@ export const displayDescription = function (element, event) {
   /* const currentElement = target.currentTarget.childNodes[3];*/
   if (element.parentNode.parentNode.childNodes[1].style.display == "flex") {
     element.parentNode.parentNode.childNodes[1].style.display = "none";
-    console.log("this works 2");
+    /* console.log("this works 2"); */
   } else {
     element.parentNode.parentNode.childNodes[1].style.display = "flex";
     console.log(element.parentNode.parentNode.childNodes[1]);
@@ -71,7 +70,7 @@ export const createArrayProject = function (array) {
     projectItem.innerText = item.name;
     projectUL.appendChild(projectItem);
 
-    console.log(item.name);
+    /* console.log(item.name); */
   });
 };
 
