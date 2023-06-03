@@ -76,54 +76,6 @@ const createTask = function (e) {
   createArrayTask(selectedProject.tasks);
 };
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  hideTaskForm();
-  clearLists(mainContent);
-  createTask(e);
-});
-
-//handle project form submit
-projectForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  hideProjectForm();
-  clearLists(projectList);
-  createProject();
-});
-
-document.addEventListener("click", (e) => {
-  const target = e.target.closest(".show-description-btn");
-  if (e.target.closest(".show-description-btn")) {
-    displayDescription(target);
-  }
-});
-
-newTaskBtn.addEventListener("click", () => {
-  displayTaskForm();
-});
-
-// display new project form
-newProjectBtn.addEventListener("click", () => {
-  displayProjectForm();
-});
-
-// add listener to projects to display its tasks
-document.addEventListener("click", (e) => {
-  if (e.target.closest(".project-item")) {
-    selectedProject = projectArray.find(
-      (projectArray) =>
-        projectArray.id == e.target.getAttribute("data-project-id")
-    );
-    render(selectedProject, selectedProject.name);
-    console.log(selectedProject);
-  }
-});
-
-// add listener to menu btns to display its tasks
-document.addEventListener("click", (e) => {
-  getClickedMenuBtn(e);
-});
-
 const getClickedMenuBtn = function (e) {
   if (e.target.closest("#inbox-menu-btn")) {
     displayAllTasks();
@@ -174,3 +126,51 @@ const displayThisWeeksTasks = function () {
     });
   });
 };
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  hideTaskForm();
+  clearLists(mainContent);
+  createTask(e);
+});
+
+//handle project form submit
+projectForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  hideProjectForm();
+  clearLists(projectList);
+  createProject();
+});
+
+document.addEventListener("click", (e) => {
+  const target = e.target.closest(".show-description-btn");
+  if (e.target.closest(".show-description-btn")) {
+    displayDescription(target);
+  }
+});
+
+newTaskBtn.addEventListener("click", () => {
+  displayTaskForm();
+});
+
+// display new project form
+newProjectBtn.addEventListener("click", () => {
+  displayProjectForm();
+});
+
+// add listener to projects to display its tasks
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".project-item")) {
+    selectedProject = projectArray.find(
+      (projectArray) =>
+        projectArray.id == e.target.getAttribute("data-project-id")
+    );
+    render(selectedProject, selectedProject.name);
+    console.log(selectedProject);
+  }
+});
+
+// add listener to menu btns to display its tasks
+document.addEventListener("click", (e) => {
+  getClickedMenuBtn(e);
+});
