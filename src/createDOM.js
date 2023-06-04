@@ -24,6 +24,7 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   const titleText = document.createElement("p");
   const time = document.createElement("div");
   const showDescriptionBtn = document.createElement("button");
+  const deleteTask = document.createElement("span");
 
   newTask.classList.add("todo-item");
   topContainer.classList.add("top-item-container");
@@ -32,11 +33,13 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   textContainer.classList.add("text-container");
   time.classList.add("time");
   showDescriptionBtn.classList.add("show-description-btn");
+  deleteTask.classList.add("material-symbols-outlined");
 
   titleText.innerText = title;
   descriptionContainer.innerText = description;
   time.innerText = date;
   showDescriptionBtn.innerText = "Description";
+  deleteTask.innerText = "delete";
 
   mainContent.appendChild(newTask);
   newTask.appendChild(topContainer);
@@ -46,6 +49,7 @@ const createNewDOMTask = function (title, description, date, type, completed) {
   topContainer.appendChild(showDescriptionBtn);
   textContainer.appendChild(titleText);
   textContainer.appendChild(time);
+  topContainer.appendChild(deleteTask);
 };
 
 export const displayDescription = function (element, event) {
