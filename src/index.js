@@ -136,6 +136,19 @@ const displayThisWeeksTasks = function () {
   });
 };
 
+const deleteTask = function (event) {
+  const taskSelected =
+    event.target.closest("#delete-task").parentNode.children[1].children[0]
+      .innerText;
+  console.log(taskSelected);
+
+  const taskToDelete = selectedProject.tasks.find(
+    (task) => task.title == taskSelected
+  );
+  selectedProject.tasks.splice(taskToDelete, 1)[0];
+  render(selectedProject, selectedProject.name);
+};
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   hideTaskForm();
@@ -182,4 +195,11 @@ document.addEventListener("click", (e) => {
 // add listener to menu btns to display its tasks
 document.addEventListener("click", (e) => {
   getClickedMenuBtn(e);
+});
+
+// add listener to delete task
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#delete-task")) {
+    deleteTask(e);
+  }
 });
