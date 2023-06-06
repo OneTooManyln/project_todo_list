@@ -23,6 +23,8 @@ const descriptionInput = document.querySelector("#task-description");
 const dateInput = document.querySelector("#task-date");
 const newProjectBtn = document.querySelector(".new-project");
 const projectNameInput = document.querySelector("#project-name");
+const closeTaskBtn = document.querySelector(".task-form-close-btn");
+const closeProjectBtn = document.querySelector(".project-form-close-btn");
 let selectedProject = projectArray.find(
   (projectArray) => projectArray.name === "My Project"
 );
@@ -202,4 +204,14 @@ document.addEventListener("click", (e) => {
   if (e.target.closest("#delete-task")) {
     deleteTask(e);
   }
+});
+
+// add listener to close task form
+closeProjectBtn.addEventListener("click", () => {
+  hideProjectForm();
+});
+
+// add listener to close project form
+closeTaskBtn.addEventListener("click", () => {
+  hideTaskForm();
 });
