@@ -197,6 +197,7 @@ h3 {
   border-radius: 5px;
   width: 490px;
   height: 220px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .project-form-header {
@@ -215,7 +216,7 @@ h3 {
 }
 
 .project-form-close-btn {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: bold;
   padding: 5px 15px;
 }
@@ -245,7 +246,8 @@ h3 {
   padding: 10px 15px;
 }
 
-#submit-project {
+#submit-project,
+#submit-task {
   padding: 5px 10px;
   color: white;
   background-color: rgb(164, 201, 231);
@@ -256,15 +258,44 @@ h3 {
 }
 
 .form-container {
-  display: none;
+  display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: aliceblue;
+  border: 1px solid black;
   border-radius: 5px;
-  width: 550px;
-  height: 300px;
+  width: 590px;
+  height: 320px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(164, 201, 231);
+  padding: 0px 15px;
+  font-weight: bold;
+  border-radius: 5px 5px 0px 0px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+h3 {
+  padding: 10px 0px;
+  font-size: 1.3rem;
+}
+
+.task-form-close-btn {
+  padding: 5px 0px;
+  font-size: 1.1rem;
+}
+
+.task-form-input-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0px 15px;
 }
 
 form {
@@ -337,8 +368,8 @@ input:focus {
   position: relative;
 }
 
-#submit {
+/* #submit-task {
   border: 1px solid black;
   background-color: aliceblue;
   height: 20px;
-}
+} */
