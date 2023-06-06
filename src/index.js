@@ -30,6 +30,7 @@ let selectedProject = projectArray.find(
 );
 
 console.log(selectedProject);
+console.table(projectArray);
 
 createArrayProject(projectArray);
 /* createArrayTask(taskArray); */
@@ -94,6 +95,8 @@ const getClickedMenuBtn = function (e) {
     displayTodayTasks();
   } else if (e.target.closest("#week-menu-btn")) {
     displayThisWeeksTasks();
+  } else {
+    clearLists();
   }
 };
 
@@ -119,6 +122,9 @@ const displayTodayTasks = function () {
         todayTasks.push(task);
         renderTitle("TODAY");
         createArrayTask(todayTasks);
+      } else {
+        clearLists(mainContent);
+        renderTitle("TODAY");
       }
     });
   });
@@ -133,6 +139,10 @@ const displayThisWeeksTasks = function () {
         thisWeeksTasks.push(task);
         renderTitle("WEEK");
         createArrayTask(thisWeeksTasks);
+      }
+      {
+        clearLists(mainContent);
+        renderTitle("WEEK");
       }
     });
   });
