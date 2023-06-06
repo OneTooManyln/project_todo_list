@@ -1,4 +1,4 @@
-const formContainer = document.querySelector(".form-container");
+const formContainer = document.querySelector(".task-form-container");
 const projectFormContainer = document.querySelector(".project-form-container");
 const mainContent = document.querySelector(".main-content");
 
