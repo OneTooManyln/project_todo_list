@@ -257,8 +257,8 @@ h3 {
   font-weight: bold;
 }
 
-.form-container {
-  display: flex;
+.task-form-container {
+  display: none;
   flex-direction: column;
   position: absolute;
   /* padding: 10px 20px; */
@@ -270,7 +270,7 @@ h3 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.form-header {
+.task-form-header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(164, 201, 231);
@@ -289,6 +289,11 @@ h3 {
 .task-form-close-btn {
   padding: 5px 0px;
   font-size: 1.1rem;
+}
+
+.task-form-close-btn:hover,
+#submit-task:hover {
+  cursor: pointer;
 }
 
 .task-form-input-container {
